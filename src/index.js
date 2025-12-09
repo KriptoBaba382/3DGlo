@@ -1,0 +1,6 @@
+const burger = require('./modules/burger')
+const sliderOne = require('./modules/slider')
+const sliderTwo = require('./modules/badScript')
+burger()
+sliderOne()
+sliderTwo()
