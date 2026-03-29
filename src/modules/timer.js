@@ -1,11 +1,11 @@
-import { formatNumber } from "./utils";
+import { formatNumber } from "./utils.js";
 const deadline = new Date('2026-05-31T23:59:59');
 const hours = document.getElementById('timer-hours');
 const minutes = document.getElementById('timer-minutes');
 const seconds = document.getElementById('timer-seconds')
 
 
-        function updateTimer() {
+       export default function updateTimer() {
             const now = new Date();
 
             const timeRemaining = deadline - now;
@@ -15,12 +15,12 @@ const seconds = document.getElementById('timer-seconds')
                 seconds.textContent = '00';
                 return;
             }
-            const hours = Math.floor(timeRemaining / (1000 * 60 * 60));
-            const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
-            hours.textContent = formatNumber(hours);
-            minutes.textContent = formatNumber(minutes);
-            seconds.textContent = formatNumber(seconds);
+            const hourse = Math.floor(timeRemaining / (1000 * 60 * 60));
+            const minutese = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
+            const secondse = Math.floor((timeRemaining % (1000 * 60)) / 1000);
+            hours.textContent = formatNumber(hourse);
+            minutes.textContent = formatNumber(minutese);
+            seconds.textContent = formatNumber(secondse);
         }
         updateTimer();
         setInterval(updateTimer, 1000); 
